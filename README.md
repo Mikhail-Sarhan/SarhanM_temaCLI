@@ -1,6 +1,6 @@
 # SarhanM_temaCLI
 
-## Răspunsuri
+## Răspunsuri (Lab 02)
 
 ---
 
@@ -41,5 +41,56 @@
 
 8. **Ce reprezintă parametrii metodei `CreatePerspectiveFieldOfView()` și care este domeniul de valori pentru aceștia?**  
    Această funcție primește de obicei un unghi de vedere, raportul de aspect și planurile de decupare (near/far). Unghiul de vedere variază de obicei între 30 și 120 de grade.
+
+---
+
+### Răspunsuri (Lab 03)
+
+---
+
+1. **Care este ordinea de desenare a vertexurilor pentru aceste metode (orar sau anti-orar)?**  
+   Ordinea de desenare a vertexurilor în OpenGL este **anti-orară** (counter-clockwise). Această ordine este folosită pentru a stabili fața "din față" a unui obiect.
+
+---
+
+2. **Ce este anti-aliasing?**  
+   Anti-aliasing este o tehnică folosită pentru a **netezi marginile obiectelor** randate, astfel încât liniile diagonale și curbele să pară mai puțin „dințate”.
+
+---
+
+3. **Care este efectul rulării comenzii `GL.LineWidth(float)`? Dar pentru `GL.PointSize(float)`?**  
+   - `GL.LineWidth(float)` setează **grosimea liniilor** desenate.
+   - `GL.PointSize(float)` setează **dimensiunea punctelor** desenate.  
+   Ambele funcții pot fi folosite **atât în interiorul, cât și în afara** unei zone `GL.Begin()`.
+
+---
+
+4. **Care este efectul utilizării directivei `LineLoop`?**  
+   `LineLoop` conectează **ultimul vertex înapoi la primul**, formând un **circuit închis**.
+
+---
+
+5. **Care este efectul utilizării directivei `LineStrip`?**  
+   `LineStrip` conectează fiecare vertex la următorul, dar **nu închide bucla** la ultimul vertex.
+
+---
+
+6. **Care este efectul utilizării directivei `TriangleFan`?**  
+   `TriangleFan` creează o **serie de triunghiuri** care împart un vertex central. Fiecare nou triunghi folosește următorul vertex și primul vertex al fanului.
+
+---
+
+7. **Care este efectul utilizării directivei `TriangleStrip`?**  
+   `TriangleStrip` creează o **bandă de triunghiuri conectate**, unde fiecare nou vertex formează un triunghi cu cele două vertexuri precedente.
+
+---
+
+8. **Ce reprezintă un gradient de culoare?**  
+   Un gradient de culoare este o **tranziție lină între două sau mai multe culori**. În OpenGL, acesta se obține prin specificarea de culori diferite pentru fiecare vertex, iar OpenGL le va combina automat între vertexuri.
+
+---
+
+9. **De ce este importantă utilizarea de culori diferite (gradient) în desenarea obiectelor 3D?**  
+   Utilizarea de culori diferite ajută la **evidențierea detaliilor și adâncimii obiectelor**. Creează un efect vizual mai realist și face obiectele să pară mai „3D”.
 
 ---
